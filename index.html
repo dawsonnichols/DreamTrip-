@@ -14,30 +14,47 @@
 
 <body>
     <!-- header -->
-    <header class="hero">
+    <header class="hero #7986cb indigo lighten-2">
         <h1 class="center-align">DreamTrip</h1>
     </header>
 
     <main class="row">
     
-        <div class="row">
-            <div class="col s12 m6">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                  <span class="card-title">Card Title</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+     <div id="1" class="col s2" >
+        <div class="search-history">
+            <form class="form-group">
+                <label for="city" id="title">Search for a City: Jerlyn</label>
+                <input type="text" class="form-control" id="city-input">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+     </div>
+
+
+     <div id="a2" class="col s9">
+         <h2 id="city"></h2>
+
+         <div id="current-tab" class="row">
+             <div id="current" class="col s3" >
+                 <h3 id="current-title"></h3>
+                 <div id="current-weather"></div>
                 </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                  <a href="#">This is a link</a>
+
+             <div id="forecast-tab" class="col s8 push-s1">
+                <h3 id="f-title"></h3> 
+                <div id="forecast"></div>
                 </div>
-              </div>
-            </div>
-          </div>
-     <div id="2"></div>
-     <div id="3"></div>
-     <div id="4"></div>
+            
+         </div>
+
+       
+            
+        </div>
+
+
+  
+
+
     
     </main>
 
@@ -46,8 +63,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/jeralyn.js"></script>
+    
     <script src="./assets/js/ghulam.js"></script>
-    <script src="./assets/js/dawson.js"></script>
+    
 </body>
 </html>
