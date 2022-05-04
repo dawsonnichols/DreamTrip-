@@ -11,7 +11,9 @@ fetch(
 
         var cityName=document.getElementById('displayCity');
 
-        cityName.textContent = data.city;        
+        cityName.textContent = data.city;   
+        getCurrentWeather(cityName.textContent);  
+          
 });
 
 
