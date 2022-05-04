@@ -1,25 +1,9 @@
 
-// Saving search history for cities
-var searchBtn = $(".btn");
-var cityInput = $("#city-input");
-var searchHistory = $(".list-group");
-var cityArray = JSON.parse(localStorage.getItem("savedCity")) || [];
 
-function savedCity(event) {
-    event.preventDefault();
-
-    cityInput = $("#city-input").val();
-    console.log(cityInput);
-    searchHistory.empty();
-
-    getCurrentWeather();
-}
-    
-searchBtn.click(savedCity);
 
 // Getting weather API
 
-function getCurrentWeather() {
+function getCurrentWeather(cityName) {
     var currentUrl = "https://api.openweathermap.org/data/2.5/weather?q="+cityInput+"&appid=60912993e53c4b95122f3139db219ebb";
       console.log(currentUrl);
     fetch(currentUrl)
@@ -56,7 +40,7 @@ function getCurrentWeather() {
   var displayCurrentWeather = function (data) {
     currentWeatherEl.empty();
     city.text(data.name);
-    //today.text(" (" + moment().format("MM/DD/YYYY") + ") ");
+    
     var currentWeather = $("<p>").text("Current Weather");
     var currentDate = $("<p>").text(" (" + moment().format("MM/DD/YYYY") + ") ");
     var currentIcon = $("<img src=http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png>").addClass("icon");
@@ -107,9 +91,8 @@ var forecast = $("#forecast");
 
 var displayForecast = function (data) {
   var forecastTitle = $("#f-title");
-  forecastTitle.text("Weather Forecast");
+  forecastTitle.text("4-Days Weather Forecast");
 
-  /*
   // Getting UVI
   function uviColor() {
 
@@ -127,17 +110,19 @@ var displayForecast = function (data) {
     currentWeatherEl.append(uvi);
   }
   uviColor();
-  */
+  
 
  // 4 days loop forecast 
   forecast.empty();
   var forecastTitle = $("<p>").text("");
+
   for (var i = 1; i < 5; i++) {
     var date = $("<p>").text(moment(data.daily[i].dt * 1000).format("MM/DD/YYYY"));
     var forecastIcon = $("<img src=http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png>").addClass("icon");
     var forecastTemp = $("<p>").text("Temp: " + ((data.daily[i].temp.day - 273.15) * 1.8 + 32).toFixed() + "°F");
     var forecastWind = $("<p>").text("Wind: " + data.daily[i].wind_speed + " MPH");
     var forecastHumidity = $("<p>").text("Humidity: " + data.daily[i].humidity + "%");
+    var forecastUviEl = $("<p>").text("UV Index: " + data.daily[i].uvi);
     var forecastCard = $("<div>").addClass("card col s3");
 
     forecast.append(forecastTitle, forecastCard);
@@ -146,10 +131,10 @@ var displayForecast = function (data) {
       forecastIcon,
       forecastTemp,
       forecastWind,
-      forecastHumidity
+      forecastHumidity,
+      forecastUviEl
     );
 
-    
   }
 };
 

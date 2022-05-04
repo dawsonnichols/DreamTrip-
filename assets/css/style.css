@@ -16,14 +16,15 @@
   .orange {
     background-color: orange;
   }
+  .purple {
+    background-color: rgb(144, 17, 218);
+  }
 
 
 #a2 {
     border: 2px solid black;
-    height: 400px;
+    height: 420px;
   
-    
-    
 }
 
 #day {
@@ -42,10 +43,6 @@
   .card {
       font-size: 15px;
 
-  }
-
-  #forecast {
-     
   }
 
 
