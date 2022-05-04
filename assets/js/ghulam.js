@@ -4,7 +4,7 @@
 // Getting weather API
 
 function getCurrentWeather(cityName) {
-    var currentUrl = "https://api.openweathermap.org/data/2.5/weather?q="+cityInput+"&appid=60912993e53c4b95122f3139db219ebb";
+    var currentUrl = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=60912993e53c4b95122f3139db219ebb";
       console.log(currentUrl);
     fetch(currentUrl)
     .then(function (response) {
