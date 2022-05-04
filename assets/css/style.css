@@ -1,3 +1,53 @@
 * {
-    margin: 0 10px; 
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+  .green {
+    background-color: green;
+  }
+  .red {
+    background-color: red;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .orange {
+    background-color: orange;
+  }
+  .purple {
+    background-color: rgb(144, 17, 218);
+  }
+
+
+#a2 {
+    border: 2px solid black;
+    height: 420px;
+  
+}
+
+#day {
+    border: 2px solid black;
+}
+
+#current-title, #f-title {
+      font-size: 25px;
+      font-weight: 600;
+  }
+  #city {
+      font-size: 40px;
+      font-weight: 800;
+      background-repeat: initial;
+  }
+  .card {
+      font-size: 15px;
+
+  }
+
+
+.city{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow:0 0 3px #eafa11, 0 0 5px #07e7f7;
 }
