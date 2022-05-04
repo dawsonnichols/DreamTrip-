@@ -1,5 +1,6 @@
+function restaurants() {
 const encodedParams = new URLSearchParams();
-encodedParams.append("q", "band");
+encodedParams.append("q", );
 encodedParams.append("language", "en_US");
 let cityCode = 0;
 const options = {
@@ -39,6 +40,7 @@ fetch("https://worldwide-restaurants.p.rapidapi.com/search", options1)
   .then((response) => response.json())
   .then((data) => console.log(data))
   .catch((err) => console.error(err));
+}
 // //first.js
 // const colorCode = {
 //   black: "#000",
@@ -49,3 +51,5 @@ fetch("https://worldwide-restaurants.p.rapidapi.com/search", options1)
 
 // //second.js
 // import { colorCode } from './first.js'
+
+// get variables across .js files if its in global scope, careful of "race condition". 
