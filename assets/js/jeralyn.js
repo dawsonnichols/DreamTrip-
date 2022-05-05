@@ -11,9 +11,15 @@ fetch(
 
         var cityName=document.getElementById('displayCity');
 
-        cityName.textContent = data.city;   
+
+        cityName.textContent = data.city;        
+
+        restaurants(cityName.textContent); 
+
+         
         getCurrentWeather(cityName.textContent);  
           
+
 });
 
 
