@@ -54,9 +54,14 @@ function restaurants(cityName) {
     });
 }
 var restaurantFunc = function (data) {
+<<<<<<< HEAD
   
   for (var i = 0; i <= 6; i++) {
     var restaurantName = $("<p>").text(data.results.data[i].name); 
+=======
+  for (var i = 0; i < 6; i++) {
+    var restaurantName = $("<p>").text(data.results.data[i].name);
+>>>>>>> main
     var restaurantImage = $(
       "<img src=" + data.results.data[i].photo.images.small.url + ">"
     );
@@ -66,8 +71,13 @@ var restaurantFunc = function (data) {
     var phone = $("<p>").text(data.results.data[i].phone);
     var caption = $("<p>").text(data.results.data[i].photo.caption);
     restaurantsDisplay.append(restaurantCard);
-    restaurantCard.append(restaurantImage, restaurantName, cuisine, price, phone, caption);
+    restaurantCard.append(
+      restaurantImage,
+      restaurantName,
+      cuisine,
+      price,
+      phone,
+      caption
+    );
   }
-
- 
 };
