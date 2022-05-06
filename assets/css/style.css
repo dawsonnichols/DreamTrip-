@@ -31,6 +31,13 @@
   
 }
 
+#animation {
+  height: 200px;
+  background-image: url("../../assets/images/b.gif");
+  background-size:contain;
+  
+  animation-duration: 10s;
+}
 #day {
     border: 2px solid black;
 }
