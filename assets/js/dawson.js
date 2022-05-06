@@ -29,7 +29,7 @@ function restaurants(cityName) {
       //   .catch((err) => console.error(err));
       const encodedParams1 = new URLSearchParams();
       encodedParams1.append("language", "en_US");
-      encodedParams1.append("limit", "4");
+      encodedParams1.append("limit", "6");
       encodedParams1.append("location_id", cityCode);
       encodedParams1.append("currency", "USD");
 
@@ -55,13 +55,13 @@ function restaurants(cityName) {
 }
 var restaurantFunc = function (data) {
   
-  for (var i = 0; i <= 3; i++) {
+  for (var i = 0; i <= 6; i++) {
     var restaurantName = $("<p>").text(data.results.data[i].name); 
     var restaurantImage = $(
       "<img src=" + data.results.data[i].photo.images.small.url + ">"
     );
     var cuisine = $("<p>").text(data.results.data[i].cuisine[0].name);
-    var restaurantCard = $("<div>").addClass("card col s3");
+    var restaurantCard = $("<div>").addClass("card col s3 m4");
     var price = $("<p>").text(data.results.data[i].price_level);
     var phone = $("<p>").text(data.results.data[i].phone);
     var caption = $("<p>").text(data.results.data[i].photo.caption);
