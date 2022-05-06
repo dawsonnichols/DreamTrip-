@@ -56,12 +56,18 @@ function restaurants(cityName) {
 var restaurantFunc = function (data) {
   
   for (var i = 0; i <= 3; i++) {
+    var restaurantName = $("<p>").text(data.results.data[i].name); 
     var restaurantImage = $(
       "<img src=" + data.results.data[i].photo.images.small.url + ">"
     );
-    var restaurantCard = $("<div>").addClass("col s3");
+    var cuisine = $("<p>").text(data.results.data[i].cuisine[0].name);
+    var restaurantCard = $("<div>").addClass("card col s3");
+    var price = $("<p>").text(data.results.data[i].price_level);
+    var phone = $("<p>").text(data.results.data[i].phone);
+    var caption = $("<p>").text(data.results.data[i].photo.caption);
+    restaurantsDisplay.append(restaurantCard);
+    restaurantCard.append(restaurantImage, restaurantName, cuisine, price, phone, caption);
   }
 
-  restaurantsDisplay.append(restaurantCard);
-  restaurantCard.append(restaurantImage);
+ 
 };
