@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    
 }
 
   .green {
@@ -24,11 +24,20 @@
 #a2 {
     border: 2px solid black;
     height: 420px;
+    background-image: url("../../assets/images/a.gif");
+    background-size: cover;
+    animation-duration: 10s;
+    
   
 }
 
 #day {
     border: 2px solid black;
+}
+#place {
+  border: 2px solid black;
+  margin-left: 10px;
+  height: 200px;
 }
 
 #current-title, #f-title {
