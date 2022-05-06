@@ -3,7 +3,6 @@ Created by Jeralyn Airoso, Dawson Nichols, Ghulam Zaka
 
 # User's story
 
-
 Given a travel guide page with pictures and what city I am currently in.
 When I open the page
 Then I presented the location of the city in which I'm currently.
