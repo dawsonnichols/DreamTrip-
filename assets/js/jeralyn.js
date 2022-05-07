@@ -1,5 +1,3 @@
-//import getPlace from "./place";
-
 var geoContainer = document.getElementById("city");
 
 fetch(
@@ -14,6 +12,19 @@ fetch(
     var cityName = document.getElementById("displayCity");
 
     cityName.textContent = data.city;
+
     getCurrentWeather(cityName.textContent);
     restaurants(cityName.textContent);
+    typing();
   });
+
+var i = 0,
+  text;
+text = "Welcome to the Beautiful City of";
+function typing() {
+  if (i < text.length) {
+    document.getElementById("welcome").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}

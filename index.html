@@ -18,60 +18,72 @@
 
   <body>
     <!-- header -->
-    <header class="hero  blue-grey darken-1">
-      <h1 class="center-align white-text">DreamTrip</h1>
+    <header>
+      <h1 class="blue-grey darken-1 white-text">DreamTrip</h1>
     </header>
 
+<!-- hero/jumbotron -->
+  <div id="geolocation">
+    <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <h3 id="welcome" class="center-align"></h3>
+      <p id="displayCity" class="city center-align"></p>
+    </div>
+    </div>
+  </div>
+
+
+
     <main class="row">
-      <div id="geolocation" class="col s4 m4">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <h3 class="center-align">Welcome To:</h3>
-            <p id="displayCity" class="city center-align"></p>
-          </div>
-        </div>
-        <div id="animation" class="card"></div>
-      </div>
-
-      <div class="row col s8">
-        <h2 id="cityRestaurants"> Restaurants </h2>
-
-        <div class="row">
-          <div class="">
-            <h3 id="currentRestaurantTitle"></h3>
-            <div id="restaurants"></div>
-          </div>
-        </div>
-      </div>
-      
-
-      <div id="a2" class="col s3">
-        <h2 id="city"></h2>
-
-        <div id="current-tab" class="row">
-          <div id="current" class="col s3">
-            <h3 id="current-title"></h3>
-            <div id="current-weather"></div>
-          </div>
-
-          <div id="forecast-tab" class="col s8 push-s1">
-            <h3 id="f-title"></h3>
-            <div id="forecast"></div>
-          </div>
-        </div>
-      </div>
-
-
-
    
+      <div id="a2" class="card col s4">
+        
+        <div id="line1" class="row center-align">
+          <h2 id="city" class="col s6"></h2>
+          <div id="temp" class="col s3"></div>
+          <div id="current" class="col s2"></div>
+        </div>
+
+        <div id="line2" class="row center-align">
+         <div id="all1" class="col s4"></div>
+         <div id="all2" class="col s4"></div>
+         <div id="all3" class="col s4"></div>
+        </div>
+
+        <div id="forecast-tab" class="row">
+          <div id="forecast"></div>
+        </div>
+
+
+        <div id="animation" class="row card"></div>
+      </div>
       
-      
-      
-      
+        
+
+      <div class="card col s8">
+          <h2 id="cityRestaurants"> Restaurants </h2>
+
+          <div class="row">
+            <div class="">
+              <h3 id="currentRestaurantTitle"></h3>
+              <div id="restaurants"></div>
+            </div>
+          </div>
+        </div>
+        
+          
+      </div>
+    <footer class="center-align">Desgined by: Jeralyn, Ghulam, and Dawson.</footer>
       
     </main>
 
     <img src="" alt="" />
+
+
+    
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
