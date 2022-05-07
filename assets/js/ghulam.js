@@ -53,6 +53,23 @@ var displayCurrentWeather = function (data) {
   currentWeatherEl.append(currentWind);
 };
 
+function displayBackground(color) {
+  var backgroundImage = url;
+
+  /*if(temp > -10 && temp <= 0){
+    color='rgba(50,97,214, 0.4)'
+  }else if(temp > 1 && temp <= 15){
+    color='rgba(244,244,244, 0.4)'
+  }else if(temp > 16 && temp <= 25){
+    color='rgba(244,204,0, 0.4)'
+  }else if(temp > 26){
+    color='rgba(216,128,48, 0.4)'
+  };
+  $('container').css('background',color)
+}*/
+  displayBackground();
+}
+
 // get 4-day forecast API
 var getForecast = function (data) {
   var cityLat = data.coord.lat;
