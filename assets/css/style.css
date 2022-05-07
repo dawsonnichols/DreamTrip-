@@ -37,8 +37,12 @@
 }
 
 #restaurants {
+
   
   height: 753px; 
+
+  border: 2px solid black; 
+
   
 }
 #animation {
