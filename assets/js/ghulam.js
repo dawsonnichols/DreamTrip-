@@ -118,7 +118,7 @@ var displayForecast = function (data) {
 
   // 4 days loop forecast
   for (var i = 1; i < 5; i++) {
-    var date = $("<p>").text(moment(data.daily[i].dt * 1000).format("dddd"));
+    var date = $("<p>").text(moment(data.daily[i].dt * 1000).format("dddd")).addClass("flow-text");
     var forecastIcon = $(
       "<img src=http://openweathermap.org/img/wn/" +
         data.daily[i].weather[0].icon +
