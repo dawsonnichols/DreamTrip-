@@ -56,13 +56,13 @@ function restaurants(cityName) {
 
 var restaurantFunc = function (data) {
   for (var i = 0; i < 6; i++) {
-    var restaurantName = $("<h5>").text(data.results.data[i].name).addClass("new badge blue-grey lighten-5");
+    var restaurantName = $("<h5>").text("\n" + data.results.data[i].name).addClass("flow-text new badge blue-grey lighten-5");
     var restaurantImage = $(
       "<a href=" + data.results.data[i].website + ">" +
       "<img src=" + data.results.data[i].photo.images.small.url + ">"
-    ).addClass("col l8");
+    ).addClass("col l12 s8");
     var cuisine = $("<p>").text("Cuisine: " + data.results.data[i].cuisine[0].name).addClass("new badge blue-grey lighten-4");
-    var restaurantCard = $("<div>").addClass("card-panel hoverable col s4");
+    var restaurantCard = $("<div>").addClass("card-panel hoverable col l4 s12");
     var price = $("<p>").text(data.results.data[i].price_level).addClass("new badge blue-grey lighten-3");
     var phone = $("<p>").text(data.results.data[i].phone).addClass("new badge blue-grey lighten-2");
     var caption = $("<p>").text("Caption: \n" + data.results.data[i].photo.caption).addClass("new badge blue-grey lighten-1");
